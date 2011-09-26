@@ -1,8 +1,9 @@
 package ssen.loader {
+
 import ssen.common.MathX;
-import ssen.common.UnbindObject;
 import ssen.common.infoToString;
 
+import flash.events.EventDispatcher;
 import flash.net.URLRequest;
 import flash.net.URLRequestMethod;
 import flash.net.URLVariables;
@@ -13,7 +14,7 @@ import flash.utils.Dictionary;
 [Event(name="stateChanged", type="ssen.loader.LoadEvent")]
 [Event(name="urlChanged", type="ssen.loader.LoadEvent")]
 /** 로드 */
-public class Load extends UnbindObject {
+public class Load extends EventDispatcher {
 	private var _parameters : Dictionary = new Dictionary;
 	/** 로드할 총 bytes 수량 */
 	private var _bytesTotal : Number = 0;
